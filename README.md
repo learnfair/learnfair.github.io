@@ -1,3 +1,15 @@
+---
+layout: page
+title: 首页
+permalink:
+jekyll-theme-WuK:
+  default:
+    sidebar:
+      open: true
+  tags:
+    vega_lite: # 显示一个统计图，需要引入 vega-lite
+      enable: true
+---
 
 {% if page.jekyll-theme-WuK.tags.vega_lite.enable %}
 
@@ -19,3 +31,10 @@
 ```
 
 {% endif %}
+
+{% for tag in site.tags reversed %}
+## {{ tag[0] }}
+
+{% for post in tag[1] %}
+- *{{ post.date | date_to_string }}* [{{ post.title }}]({{ post.url | relative_url }}){% endfor %}
+{% endfor %}
