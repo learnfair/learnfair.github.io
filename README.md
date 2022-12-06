@@ -5,7 +5,7 @@ permalink:
 jekyll-theme-WuK:
   default:
     sidebar:
-      open: true
+      open: false
   tags:
     vega_lite: # 显示一个统计图，需要引入 vega-lite
       enable: true
